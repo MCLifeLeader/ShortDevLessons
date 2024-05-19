@@ -1,0 +1,91 @@
+{
+  "name": "Short Developer Lessons",
+  "image": "mcr.microsoft.com/dotnet/sdk:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "2"
+    },
+    "ghcr.io/devcontainers/features/powershell:1": {
+      "version": "latest"
+    },
+    "ghcr.io/azure/azure-dev/azd:0": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "none",
+      "dotnetRuntimeVersions": "8.0",
+      "aspNetCoreRuntimeVersions": "8.0"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.windows": "PowerShell"
+      },
+      "extensions": [
+        "blackmist.LinkCheckMD",
+        "christian-kohler.npm-intellisense",
+        "DavidAnson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint",
+        "DotJoshJohnson.xml",
+        "ecmel.vscode-html-css",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "GitHub.codespaces",
+        "GitHub.copilot-chat",
+        "GitHub.copilot",
+        "GitHub.remotehub",
+        "github.vscode-github-actions",
+        "humao.rest-client",
+        "mechatroner.rainbow-csv",
+        "ms-azuretools.vscode-azurestaticwebapps",
+        "ms-azuretools.vscode-docker",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.vscodeintellicode-csharp",
+        "ms-mssql.mssql",
+        "ms-mssql.sql-database-projects-vscode",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode.hexeditor",
+        "ms-vscode.live-server",
+        "ms-vscode.powershell",
+        "ms-vsliveshare.vsliveshare",
+        "rangav.vscode-thunder-client",
+        "redhat.vscode-yaml",
+        "ritwickdey.LiveServer",
+        "sidthesloth.html5-boilerplate",
+        "streetsidesoftware.code-spell-checker",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "vscode-icons-team.vscode-icons",
+        "xabikos.JavaScriptSnippets",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  "forwardPorts": [
+    7200
+  ],
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb",
+    "storage": "20gb"
+  },
+  "remoteEnv": {
+    "DOTNET_MULTILEVEL_LOOKUP": "0",
+    "TARGET": "net8.0"
+  },
+  "portsAttributes": {
+    "7200": {
+      "label": "Web Page One",
+      "onAutoForward": "notify"
+    }
+  }
+}
