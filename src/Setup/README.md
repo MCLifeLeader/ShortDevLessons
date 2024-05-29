@@ -16,16 +16,18 @@ Should the automatic configuration script fail, manual installation steps can be
 
 ### Windows
 
-- Locate the script named [See /src/setup-windows.ps1 for details](/src/setup-windows.ps1)
--
+- Locate the script named see [/src/setup-windows.ps1](/src/setup-windows.ps1)
+  - This script has been tested and should work.
 
 ### iOS
 
-- Locate the script named [See /src/setup-mac.sh for details](/src/setup-mac.sh)
+- Locate the script named see [/src/setup-mac.sh](/src/setup-mac.sh)
+  - This script is untested and may not work as expected.
 
 ### Ubuntu
 
-- Locate the script named [See /src/setup-ubuntu.sh for details](/src/setup-ubuntu.sh)
+- Locate the script named see [/src/setup-ubuntu.sh](/src/setup-ubuntu.sh)
+  - This script has been tested and should work.
 
 ## Manual Install Steps
 
@@ -41,10 +43,19 @@ To manually install the .NET SDK and set up VSCode, you can follow these steps:
 
 5. After the installation is complete, open Visual Studio Code (VSCode).
 
-6. Install the C# extension for VSCode. You can do this by opening the Extensions view in VSCode (Ctrl+Shift+X), searching for "C#" in the search bar, and clicking on the "C#" extension by Microsoft.
+6. Import VSCode Extensions Package
 
-7. Once the extension is installed, you may need to restart VSCode for the changes to take effect.
+Note some of these steps may be slightly different depending on if your existing computer operating system and environment.
 
-8. Now you can start writing C# applications using the .NET SDK in VSCode.
+- ![Import VSCode Extensions 1](/src/Setup/Import%20VSCode%20Extensions%201.png)
+  - Locate the 'cog' icon and click it
+  - Select Profiles
+  - Then select "Import Profile"
+- ![Import VSCode Extensions 2](/src/Setup/Import%20VSCode%20Extensions%202.png)
+  - Click the "Select File"
+- ![Import VSCode Extensions 3](/src/Setup/Import%20VSCode%20Extensions%203.png)
+  - Click "Show Local"
+- ![Import VSCode Extensions 4](/src/Setup/Import%20VSCode%20Extensions%204.png)
+  - Finally select the file "VSCode-Basic_Dev.code-profile" and import the profile along with its associated extensions.
 
-Please note that these steps assume you have already installed VSCode on your system. If you haven't, you can download it from the official VSCode website: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+Your base resources should now be installed and ready for use.
