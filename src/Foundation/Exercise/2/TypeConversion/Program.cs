@@ -1,37 +1,34 @@
-﻿internal class Program
+﻿using System.Text;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        int myInt = 1;
-        float myFloat = 1f;
-        bool myBoolean = true;
-        string myName = "John";
-        char myChar = 'a';
-        byte myByte = 0x20;
-        double myDouble = 1.75;
+        // Value with decimal precision
+        double myDbl = 45.654345;
 
+        // Convert double to int
+        int myInt = (int)myDbl;
+
+        // Precision preserved
+        Console.WriteLine($"myDbl = {myDbl}");
+        // Precision lost
         Console.WriteLine($"myInt = {myInt}");
-        Console.WriteLine($"myFloat = {myFloat}");
-        Console.WriteLine($"myBoolean = {myBoolean}");
-        Console.WriteLine($"myName = {myName}");
-        Console.WriteLine($"myChar = {myChar}");
-        Console.WriteLine($"myDouble = {myDouble}");
 
-        var x = 1;
-        var y = 2;
-        var sum = x + y;    // sum will also be defined as an integer
+        // Precision preserved
+        Console.WriteLine($"myInt + myDbl = {myInt + myDbl}");
+        Console.WriteLine($"myDbl + myInt = {myDbl + myInt}");
 
-        Console.WriteLine($"sum = {sum}");
+        // Convert int to string
+        string myStr = Convert.ToString(15);
+        Console.WriteLine($"Number to String = {myStr}");
 
-        var carType = CarType.Toyota;
+        // Convert string to bytes
+        byte[] myBytes = Encoding.UTF8.GetBytes(myStr);
+        Console.WriteLine($"myBytes = {string.Join(", ", myBytes)}");
 
-        Console.WriteLine($"carType = {carType}");
-    }
-
-    public enum CarType
-    {
-        Toyota = 1,
-        Honda = 2,
-        Ford = 3,
+        // Convert string to chars
+        char[] myChars = Encoding.UTF8.GetChars(myBytes);
+        Console.WriteLine($"myChars = {string.Join(", ", myChars)}");
     }
 }
