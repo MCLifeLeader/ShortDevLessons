@@ -32,3 +32,8 @@ See [/src/Setup/README.md](/src/Setup/README.md)
 See [/src/Foundation/README.md](/src/Foundation/README.md)
 
 By following this lesson plan, students will gain a foundation in programming concepts through C#, enabling them to tackle more complex projects and continue their learning journey in various programming domains into the future.
+
+# Codespaces
+## GitHub Configuration
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
